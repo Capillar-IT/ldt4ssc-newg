@@ -2,7 +2,7 @@
 
 **NeWG+** interconnects two Local Digital Twins (LDTs) across complementary urban and territorial morphologies under **LDT4SSC Work Strand 1**:
 
-1. **Madrid (*Market-to-City* Flagship)**: Large metropolitan wholesale-to-retail ecosystem anchored in **Mercamadrid** (Europe's largest fresh-food platform), **COMAPES / AEMPM / ADEPESCA**, **5 pilot municipal markets** (*Maravillas, Vallehermoso, Tetuán, Chamartín, Ventas* within the 46-market municipal network), and the **Madrid Capital Digital** infrastructure (*Gemelo de Gemelos / Twin-of-Twins*, *City OS*, *Smart Urban Spaces / EUIs*, and the *Mercamadrid / EDINT Data Space*).
+1. **Madrid (*Market-to-City* Flagship)**: Large metropolitan wholesale-to-retail ecosystem anchored in **Mercamadrid** (Europe's largest fresh-food platform), **COMAPES / AEMPM / ADEPESCA**, **Mercado de Maravillas** (Madrid's flagship pilot municipal market and Smart Urban Space / EUI anchor for the city's 46-market network), and the **Madrid Capital Digital** infrastructure (*Gemelo de Gemelos / Twin-of-Twins*, *City OS*, *Smart Urban Spaces / EUIs*, and the *Mercamadrid / EDINT Data Space*).
 2. **Codogno (*Territory-to-City* Agrifood Corridor Twin)**: A medium-sized municipality in Lombardy's dairy and agrifood basin operating an existing 3D Local Digital Twin in CesiumJS (engineered with **Politecnico di Milano — POLIMI**), extended with a lightweight agrifood-flow observatory, local H3 smart mesh, corridor simulation toward **Milano / Sogemi**, and an optional light NeWG shared-dispatch probe.
 
 ---

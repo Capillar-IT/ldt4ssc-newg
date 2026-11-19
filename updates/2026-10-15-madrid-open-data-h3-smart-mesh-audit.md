@@ -34,7 +34,7 @@ Direct inspection of the live XML, KML, and JSON streams confirms that Madrid al
 2. **Traffic Speed, Road Load & Level of Service (every 5 minutes across 4,000+ loop detectors)**:
    - Live loop telemetry (`pm.xml`, `202087-0`) reporting intensity (`<intensidad>`), occupancy (`<ocupacion>`), load (`<carga>` 0–100%), and service level (`<nivelServicio>` 0–3), paired with M-30 travel-time estimations (`EstimacionesTrafico.xml`, `212132-0`) and the structural **Annual Average Daily Speed by Street Segment (`300340-0-trafico-velocidad`)**.
 3. **Urban Freight & Loading Bay Saturation (`DUM 360`)**:
-   - Geolocated inventory of public loading/unloading bays (`208072-0-carga-descarga`) combined with historical **DUM 360 check-in/check-out ticket logs (`300747-0-tiques-carga-descarga`)**, enabling hourly bay-occupancy probability curves around Madrid's **46 Municipal Markets (`200967-0-mercados`)**.
+   - Geolocated inventory of public loading/unloading bays (`208072-0-carga-descarga`) combined with historical **DUM 360 check-in/check-out ticket logs (`300747-0-tiques-carga-descarga`)**, enabling hourly bay-occupancy probability curves around **Mercado de Maravillas** (and extensible via `200967-0-mercados` across Madrid's municipal market network).
 4. **Environmental, ZBE & Food-Safety Layers**:
    - Real-time hourly Air Quality API (`calair_tiemporeal.json`, `212531-0`), Low Emission Zone (ZBE) OCR camera locations (`300654-0`), public EV fast-charging stations (`208979-0`), Mercamadrid wholesale volumes (`300357-0`), and Madrid Salud food-safety inspection baselines (`300382-0`).
 
