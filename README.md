@@ -1,104 +1,53 @@
-# LDT4SSC Pilot Project Repository
+# NeWG+ — LDT4SSC Pilot Project Repository (Work Strand 1)
 
-> ## 🚧 Setup instructions — delete this section once your repository is live
->
-> Prefer GitLab (gitlab.com or your own self-managed instance)? Use the
-> [GitLab pilot template](https://gitlab.com/ldt4ssc/pilot-template) instead.
->
-> 1. Get your own copy of the template:
->    - **On github.com:** click **"Use this template" → "Create a new
->      repository"** on the `pilot-template` GitHub repo, choosing your
->      pilot's org/name, then clone it locally.
->    - **On a GitHub Enterprise Server (GHES) instance:** "Use this
->      template" only works within a single GitHub instance, so you can't
->      use it across github.com → your GHES org. Instead, clone from the
->      public template and push to your own instance:
->      ```bash
->      git clone https://github.com/ldt4ssc/pilot-template.git ldt4ssc-<your-pilot-slug>
->      cd ldt4ssc-<your-pilot-slug>
->      rm -rf .git && git init
->      git remote add origin <your-new-ghes-repo-url>
->      git add -A && git commit -m "Initial commit"
->      git push -u origin main
->      ```
->      Also note: [.github/workflows/validate-updates.yml](.github/workflows/validate-updates.yml)
->      calls a **reusable workflow** hosted at
->      `github.com/ldt4ssc/ldt4ssc.github.io` — GitHub Actions reusable
->      workflows cannot be called across different GitHub instances, so this
->      `uses:` reference will not resolve on GHES as-is. Until a GHES-hosted
->      copy of that reusable workflow exists, replace it with a self-contained
->      job on GHES (checkout, set up Python, `curl` the schema/validator from
->      `raw.githubusercontent.com`, then run it) — check with the LDT4SSC
->      consortium for the current recommended approach, and confirm with your
->      GitHub admin that Actions runners have outbound HTTPS access to
->      `raw.githubusercontent.com` if you go this route.
-> 2. Edit [`pilot.yaml`](pilot.yaml) to describe your pilot.
-> 3. Read [`updates/README.md`](updates/README.md) to understand the update format.
-> 4. Copy one of the examples in `updates/_examples/` and adapt it to write your
->    first update.
-> 5. Commit and push. The validation workflow will check that your update
->    conforms to the schema.
-> 6. Register your repository URL with the LDT4SSC consortium so that it is
->    picked up by the aggregator. (See the LDT4SSC pilot onboarding package
->    for the current registration mechanism.)
+**New Wholesale Market Generation: cities digital infrastructure implementation through sustainable logistics and commerce**
 
----
+This repository is the home of the **NeWG+ pilot project** under the European **LDT4SSC** (*Local Digital Twins for Smart and Sustainable Communities*, Work Strand 1 — Interconnecting Local Digital Twins). It contains the pilot's documentation, shared artefacts, data models, and ongoing journey updates, serving as the canonical public record of the pilot's work (`2026-08-31` to `2028-02-29`).
 
-` < change as necessary > `
+## Overview
 
-This repository is the home of an **LDT4SSC pilot project**. It contains the
-pilot's documentation, shared artefacts, and ongoing updates, and serves as the
-canonical public record of the pilot's work within the LDT4SSC initiative.
+**NeWG+** interconnects Madrid's *Market-to-City* flagship with Codogno's *Territory-to-City* Agrifood Corridor Twin across two complementary urban and territorial scales:
 
-This repository was created from the [LDT4SSC pilot template](https://github.com/ldt4ssc/pilot-template)
-and follows the structure and conventions of the LDT4SSC pilot documentation
-framework.
+- **Madrid (Spain) — Market-to-City Flagship**: Anchored in **Mercamadrid** (Europe's largest fresh-food wholesale hub), **5 pilot municipal markets** (*Maravillas, Vallehermoso, Tetuán, Chamartín, Ventas* within the 46-market network), and the **Madrid Capital Digital** strategy (Twin-of-Twins / *Gemelo de Gemelos*, City OS, Smart Urban Spaces / EUIs, and Municipal Data Space). Low-digital-maturity wholesalers, logistics operators, and B2B buyers adopt **NeWG** for daily operations (catalogues, orders, stock, dispatch, routes, ETA, and Digital Product Passport continuity), generating governed data products via **MIRA & InterFlux** (with **SEAMWARE** FIWARE/EDC data-space components) and **H3 Smart Mesh** context enrichment for reusable city services.
+- **Codogno (Italy) — Territory-to-City Agrifood Corridor Twin**: A medium-sized municipality in Lombardy's dairy and agrifood basin operating a bounded local digital twin and observatory led by **Politecnico di Milano (POLIMI)**, simulating producer flows, urban loading/access windows, intermodality, and corridor intelligence toward metropolitan demand nodes (Milano / Sogemi).
 
-## What this repository is for
+## Consortium
 
-This repository is the **project repository** for this pilot within LDT4SSC.
-It exists so that:
+| Partner | Role | Country |
+|---|---|---|
+| **Ayuntamiento de Madrid — Dirección General de la Oficina Digital (DGOD)** | Pilot Lead & Public Authority | Spain (`ES`) |
+| **Comune di Codogno** | Second Public Authority & Pilot Site | Italy (`IT`) |
+| **capillar IT** | Technical Coordinator & Product Delivery Lead (NeWG, Smart Mesh, DPP continuity) | Spain (`ES`) |
+| **SEAMWARE** | Data-Space Technology & Governance Provider (FIWARE / EDC) | Spain (`ES`) |
+| **Mines Paris — PSL** | Scientific Partner, Methodology & Validation Lead | France (`FR`) |
+| **Politecnico di Milano (POLIMI)** | Technical-Scientific Lead for Codogno Workstream | Italy (`IT`) |
 
-- The pilot has a **single canonical public location** for its work that is
-  visible to the LDT4SSC community and to the wider public.
-- The pilot's **updates, milestones, lessons learned, and shared assets** can
-  be published in a structured form and aggregated by the Knowledge Hub and
-  the LDT4SSC project website.
-- The pilot **owns its own record** of its work, independently of any central
-  project infrastructure. If LDT4SSC project infrastructure evolves or ends,
-  the content in this repository remains intact, open, and accessible.
-- Outputs produced by the pilot can be **preserved, cited, and reused** by
-  others, now and in the future.
+## Pilot Coordination & Contacts
 
-This repository is **the pilot's own**. The consortium maintains the template
-and the aggregation infrastructure, but the content is owned, authored, and
-controlled by the pilot.
+| Name | Role | Organisation | Contact |
+|---|---|---|---|
+| **Fernando Álvarez García** | Pilot Lead & Public Governance Lead (*Subdirector General de Transformación Digital, 5G / IoT*) | Ayuntamiento de Madrid — Dirección General de la Oficina Digital (DGOD) | `alvarezgf@madrid.es` |
+| **Javier Esquillor** | Technical Coordinator & Managing Director | capillar IT | `javi@capillar.it` |
+| **Andrés Julián** | Technical Coordinator, COO & Product Delivery Lead | capillar IT | `andres.j@capillar.it` |
 
-## Repository structure
+## Repository Structure
 
-- [`pilot.yaml`](pilot.yaml) — core metadata describing this pilot (name,
-  partners, work strand, focus areas). **Edit this first.**
-- [`updates/`](updates/) — structured updates on the pilot's journey:
-  milestones, lessons learned, general progress, and references to assets and
-  events. See [`updates/README.md`](updates/README.md) for the format.
-- [`docs/`](docs/) — general project documentation.
-- [`assets/`](assets/) — references to shared artefacts contributed by this
-  pilot to the LDT4SSC Assets and Services Repository.
-- [`src/`](src/) — source code developed by the pilot, if shared here.
-- [`data-models/`](data-models/) — pilot-specific data models or references
-  to published data models.
+- [`pilot.yaml`](pilot.yaml) — core metadata describing the NeWG+ pilot (name, partners, work strand, locations, focus areas, contacts), read by the LDT4SSC Knowledge Hub aggregator.
+- [`updates/`](updates/) — structured updates on the pilot's journey: milestones, lessons learned, general progress, released assets, and events. See [`updates/README.md`](updates/README.md) for the schema and format:
+  - [`2026-08-31-pilot-grant-agreement-signed-and-launch.md`](updates/2026-08-31-pilot-grant-agreement-signed-and-launch.md) (`milestone`)
+  - [`2026-10-15-madrid-open-data-h3-smart-mesh-audit.md`](updates/2026-10-15-madrid-open-data-h3-smart-mesh-audit.md) (`general`)
+  - [`2026-10-18-mercamadrid-and-municipal-areas-kickoff.md`](updates/2026-10-18-mercamadrid-and-municipal-areas-kickoff.md) (`event`)
+- [`docs/`](docs/) — general project and architectural documentation ([`architecture.md`](docs/architecture.md), [`madrid-open-data-h3-smart-mesh.md`](docs/madrid-open-data-h3-smart-mesh.md), [`madrid-emt-and-open-data-catalog.md`](docs/madrid-emt-and-open-data-catalog.md)).
+- [`assets/`](assets/) — references to shared artefacts and services contributed by NeWG+ to the LDT4SSC Assets and Services Repository and EU LDT Toolbox Marketplace.
+- [`src/`](src/) — open-source software components, scripts, and integration tools shared by the pilot.
+- [`data-models/`](data-models/) — NGSI-LD / Smart Data Models and semantic mappings used across the interconnected digital twins.
 
 ## Licensing
 
-Code in this repository is licensed under the Apache License 2.0. Content
-and documentation are licensed under Creative Commons Attribution 4.0
-International (CC BY 4.0) unless stated otherwise. See [`LICENSE`](LICENSE) for
-details.
+Code in this repository is licensed under the Apache License 2.0. Content and documentation are licensed under Creative Commons Attribution 4.0 International (CC BY 4.0) unless stated otherwise. See [`LICENSE`](LICENSE) for details.
 
 ## About LDT4SSC
 
-LDT4SSC (Local Digital Twins for Smart and Sustainable Communities) is a
-project funded by the Digital Europe Programme under grant agreement number 101226211, developing an interconnected ecosystem of Local Digital Twins across Europe.
+LDT4SSC (Local Digital Twins for Smart and Sustainable Communities) is a project funded by the Digital Europe Programme under grant agreement number 101226211, developing an interconnected ecosystem of Local Digital Twins across Europe.
 
-Learn more at the [LDT4SSC project website](https://ldt4ssc.eu/) and the
-[LDT4SSC Knowledge Hub](https://knowledgehub.ldt4ssc.eu/).
+Learn more at the [LDT4SSC project website](https://ldt4ssc.eu/), the [LDT4SSC Knowledge Hub](https://knowledgehub.ldt4ssc.eu/), and the [NeWG+ Pilot Page](https://knowledgehub.ldt4ssc.eu/journey/pilots/round2/newg/).
